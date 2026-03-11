@@ -1,0 +1,63 @@
+---
+import { Menu, ChevronDown } from 'lucide-react';
+import jizo from '../assets/images/jizo.jpg';
+---
+
+<header class="border-b border-[#E5E0D8] bg-white/80 backdrop-blur-sm sticky top-0 z-50">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16 sm:h-20">
+      <a href="/coreselfreiki/" class="flex items-center gap-3">
+        <img
+          src={jizo.src}
+          alt="Jizo Bodhisattva - Core Self Reiki Logo"
+          class="w-12 h-12 sm:w-14 sm:h-14 object-contain"
+        />
+        <span class="font-serif text-xl sm:text-2xl text-[#2C1810]">Core Self Reiki</span>
+      </a>
+
+      {/* Desktop Navigation */}
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="/coreselfreiki/" class="text-[#4A4A4A] hover:text-[#7C3F47] transition-colors text-sm">
+          Home
+        </a>
+        
+        {/* Lineage Dropdown */}
+        <div class="relative group">
+          <a href="/coreselfreiki/lineage" class="flex items-center gap-1 text-[#4A4A4A] hover:text-[#7C3F47] transition-colors text-sm py-2">
+            Lineage <ChevronDown className="w-4 h-4" />
+          </a>
+          <div class="absolute left-0 mt-0 w-48 bg-white border border-[#E5E0D8] shadow-lg rounded-md overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <a href="/coreselfreiki/lineage/reiki-ryoho" class="block px-4 py-2 text-sm text-[#4A4A4A] hover:bg-[#F5F1EB] hover:text-[#7C3F47]">Reiki Ryoho</a>
+            <a href="/coreselfreiki/lineage/gendai-reiki-ho" class="block px-4 py-2 text-sm text-[#4A4A4A] hover:bg-[#F5F1EB] hover:text-[#7C3F47]">Gendai Reiki Ho</a>
+            <a href="/coreselfreiki/lineage/komyo-reikido" class="block px-4 py-2 text-sm text-[#4A4A4A] hover:bg-[#F5F1EB] hover:text-[#7C3F47]">Komyo ReikiDo</a>
+          </div>
+        </div>
+
+        {/* Services Dropdown */}
+        <div class="relative group">
+          <a href="/coreselfreiki/services" class="flex items-center gap-1 text-[#4A4A4A] hover:text-[#7C3F47] transition-colors text-sm py-2">
+            Services <ChevronDown className="w-4 h-4" />
+          </a>
+          <div class="absolute left-0 mt-0 w-56 bg-white border border-[#E5E0D8] shadow-lg rounded-md overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <a href="/coreselfreiki/services/group-classes" class="block px-4 py-2 text-sm text-[#4A4A4A] hover:bg-[#F5F1EB] hover:text-[#7C3F47]">Group Classes</a>
+            <a href="/coreselfreiki/services/reiki-for-youngsters" class="block px-4 py-2 text-sm text-[#4A4A4A] hover:bg-[#F5F1EB] hover:text-[#7C3F47]">Reiki for Youngsters</a>
+            <a href="/coreselfreiki/services/reiki-practice-circles" class="block px-4 py-2 text-sm text-[#4A4A4A] hover:bg-[#F5F1EB] hover:text-[#7C3F47]">Reiki Practice Circles</a>
+            <a href="/coreselfreiki/services/private-sessions" class="block px-4 py-2 text-sm text-[#4A4A4A] hover:bg-[#F5F1EB] hover:text-[#7C3F47]">Private Sessions</a>
+          </div>
+        </div>
+
+        <a href="/coreselfreiki/about" class="text-[#4A4A4A] hover:text-[#7C3F47] transition-colors text-sm">
+          About
+        </a>
+        <a href="/coreselfreiki/contact" class="text-[#4A4A4A] hover:text-[#7C3F47] transition-colors text-sm">
+          Contact
+        </a>
+      </nav>
+
+      {/* Mobile Menu Button */}
+      <button class="md:hidden p-2" id="mobile-menu-button">
+        <Menu className="w-6 h-6 text-[#4A4A4A]" />
+      </button>
+    </div>
+  </div>
+</header>

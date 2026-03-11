@@ -1,0 +1,53 @@
+---
+import { Button } from './ui/Button.astro';
+import jizo from '../assets/images/jizo.jpg';
+---
+
+<footer class="bg-[#2C1810] text-white py-12">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <img src={jizo.src} alt="Jizo Bodhisattva" class="w-10 h-10 object-contain" />
+          <h3 class="font-serif text-xl">Core Self Reiki</h3>
+        </div>
+        <p class="text-sm text-white/70 leading-relaxed">
+          Discover, reclaim, deepen, and integrate your experience of your core self through Reiki Ryoho.
+        </p>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-4">Quick Links</h4>
+        <ul class="space-y-2 text-sm">
+          <li>
+            <a href="/coreselfreiki/" class="text-white/70 hover:text-white transition-colors">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="/coreselfreiki/about" class="text-white/70 hover:text-white transition-colors">
+              About
+            </a>
+          </li>
+          <li>
+            <a href="/coreselfreiki/contact" class="text-white/70 hover:text-white transition-colors">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-4">Connect</h4>
+        <p class="text-sm text-white/70 mb-4">
+          For inquiries about sessions or courses, please contact Elyssa Matthews.
+        </p>
+        <button class="bg-[#7C3F47] hover:bg-[#6A3540] text-white px-4 py-2 rounded text-sm transition-colors">
+          Get in Touch
+        </button>
+      </div>
+    </div>
+    <div class="mt-8 pt-8 border-t border-white/10 text-center text-sm text-white/50">
+      <p>&copy; {new Date().getFullYear()} Core Self Reiki. All rights reserved.</p>
+      <p class="mt-2 text-xs">Logo artwork by Yosei Kansaku</p>
+    </div>
+  </div>
+</footer>

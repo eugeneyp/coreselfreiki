@@ -1,0 +1,87 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Mail, Phone, MapPin } from 'lucide-react';
+---
+
+<Layout title="Contact - Core Self Reiki">
+  <main class="bg-[#FAF8F5] min-h-screen pb-20">
+    {/* Page Header/Banner */}
+    <section class="bg-[#F5F1EB] py-16 sm:py-20 border-b border-[#E5E0D8]">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center">
+        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#2C1810] mb-4 uppercase tracking-tight">
+          Contact
+        </h1>
+        <div class="w-20 h-1 bg-[#7C3F47] mx-auto"></div>
+      </div>
+    </section>
+
+    {/* Content Section */}
+    <section class="py-16 sm:py-20 lg:py-24 bg-white">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20">
+          
+          {/* Left Side: Contact Info */}
+          <div class="space-y-12">
+            <div>
+              <h2 class="font-serif text-3xl text-[#2C1810] mb-6">Get in Touch</h2>
+              <p class="text-lg text-[#5A5A5A] leading-relaxed">
+                For inquiries about Reiki sessions, group classes, or courses, please feel free to reach out to Elyssa Matthews.
+              </p>
+            </div>
+
+            <div class="space-y-6">
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded-full bg-[#F5F1EB] flex items-center justify-center text-[#7C3F47]">
+                  <Mail className="w-6 h-6" />
+                </div>
+                <div>
+                  <p class="text-sm text-[#4A4A4A] uppercase tracking-wider font-semibold">Email</p>
+                  <a href="mailto:elyssa@coreselfreiki.ca" class="text-lg text-[#7C3F47] hover:underline font-medium">
+                    elyssa@coreselfreiki.ca
+                  </a>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded-full bg-[#F5F1EB] flex items-center justify-center text-[#7C3F47]">
+                  <Phone className="w-6 h-6" />
+                </div>
+                <div>
+                  <p class="text-sm text-[#4A4A4A] uppercase tracking-wider font-semibold">Phone</p>
+                  <a href="tel:416-422-2055" class="text-lg text-[#2C1810] hover:text-[#7C3F47] transition-colors font-medium">
+                    416-422-2055
+                  </a>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded-full bg-[#F5F1EB] flex items-center justify-center text-[#7C3F47]">
+                  <MapPin className="w-6 h-6" />
+                </div>
+                <div>
+                  <p class="text-sm text-[#4A4A4A] uppercase tracking-wider font-semibold">Location</p>
+                  <p class="text-lg text-[#2C1810] font-medium leading-tight">
+                    East York, Toronto, Ontario
+                  </p>
+                  <p class="text-sm text-[#5A5A5A]">TTC accessible & Free parking available</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Side: Simple Message Box */}
+          <div class="bg-[#F5F1EB] p-8 sm:p-10 rounded-2xl border border-[#E5E0D8]">
+            <h3 class="font-serif text-2xl text-[#2C1810] mb-6 italic">A Note for Visitors</h3>
+            <p class="text-[#5A5A5A] leading-relaxed mb-6">
+              Each session and course is a unique opportunity for discovery and healing. Whether you are a seasoned practitioner or exploring Reiki for the first time, your journey is honored here.
+            </p>
+            <div class="p-6 bg-white/50 rounded-lg border border-[#E5E0D8] italic text-[#4A4A4A]">
+              "Put your mind at ease and trust yourself; your presence itself is light and love."
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
