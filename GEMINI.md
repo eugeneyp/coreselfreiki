@@ -14,3 +14,4 @@ The primary goal is pixel-perfect visual parity with the original v0 design.
 2. **Tailwind Fidelity:** Never alter or "optimize" the Tailwind utility classes from the v0 source code. Copy them exactly as they are to preserve the v0 design perfectly.
 3. **Asset Paths:** Remember this site will be deployed to GitHub Pages. Ensure image paths account for the repository base path if necessary, or use standard Astro `public/` directory conventions for assets (e.g., `/images/flora-warm-bg.jpeg`).
 4. **Tooling:** Always output commands using `bun` instead of `npm`.
+5. **Astro Reference:** Always use the configured Astro MCP server when looking up Astro documentation or reference.
