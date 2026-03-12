@@ -1,5 +1,5 @@
 ---
-import { Menu, ChevronDown } from 'lucide-react';
+import { Menu, ChevronDown, X } from 'lucide-react';
 import jizo from '../assets/images/jizo.jpg';
 ---
 
@@ -17,13 +17,13 @@ import jizo from '../assets/images/jizo.jpg';
 
       {/* Desktop Navigation */}
       <nav class="hidden md:flex items-center gap-8">
-        <a href="/coreselfreiki/" class="text-[#4A4A4A] hover:text-[#7C3F47] transition-colors text-sm">
+        <a href="/coreselfreiki/" class="text-[#4A4A4A] hover:text-[#7C3F47] transition-colors text-sm font-medium">
           Home
         </a>
         
         {/* Lineage Dropdown */}
         <div class="relative group">
-          <a href="/coreselfreiki/lineage" class="flex items-center gap-1 text-[#4A4A4A] hover:text-[#7C3F47] transition-colors text-sm py-2">
+          <a href="/coreselfreiki/lineage" class="flex items-center gap-1 text-[#4A4A4A] hover:text-[#7C3F47] transition-colors text-sm py-2 font-medium">
             Lineage <ChevronDown className="w-4 h-4" />
           </a>
           <div class="absolute left-0 mt-0 w-48 bg-white border border-[#E5E0D8] shadow-lg rounded-md overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
@@ -35,7 +35,7 @@ import jizo from '../assets/images/jizo.jpg';
 
         {/* Services Dropdown */}
         <div class="relative group">
-          <a href="/coreselfreiki/services" class="flex items-center gap-1 text-[#4A4A4A] hover:text-[#7C3F47] transition-colors text-sm py-2">
+          <a href="/coreselfreiki/services" class="flex items-center gap-1 text-[#4A4A4A] hover:text-[#7C3F47] transition-colors text-sm py-2 font-medium">
             Services <ChevronDown className="w-4 h-4" />
           </a>
           <div class="absolute left-0 mt-0 w-56 bg-white border border-[#E5E0D8] shadow-lg rounded-md overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
@@ -46,18 +46,77 @@ import jizo from '../assets/images/jizo.jpg';
           </div>
         </div>
 
-        <a href="/coreselfreiki/about" class="text-[#4A4A4A] hover:text-[#7C3F47] transition-colors text-sm">
+        <a href="/coreselfreiki/about" class="text-[#4A4A4A] hover:text-[#7C3F47] transition-colors text-sm font-medium">
           About
         </a>
-        <a href="/coreselfreiki/contact" class="text-[#4A4A4A] hover:text-[#7C3F47] transition-colors text-sm">
+        <a href="/coreselfreiki/contact" class="text-[#4A4A4A] hover:text-[#7C3F47] transition-colors text-sm font-medium">
           Contact
         </a>
       </nav>
 
       {/* Mobile Menu Button */}
-      <button class="md:hidden p-2" id="mobile-menu-button">
-        <Menu className="w-6 h-6 text-[#4A4A4A]" />
+      <button class="md:hidden p-2 text-[#4A4A4A]" id="mobile-menu-button" aria-label="Toggle Menu">
+        <Menu className="w-6 h-6 block active-icon" id="menu-icon" />
+        <X className="w-6 h-6 hidden active-icon" id="close-icon" />
       </button>
     </div>
   </div>
+
+  {/* Mobile Navigation Menu */}
+  <div class="hidden md:hidden bg-white border-b border-[#E5E0D8] py-4 px-4 space-y-2" id="mobile-menu">
+    <a href="/coreselfreiki/" class="block py-2 text-[#4A4A4A] hover:text-[#7C3F47] font-medium border-b border-[#F5F1EB]">Home</a>
+    
+    <div class="py-2">
+      <p class="text-xs uppercase tracking-widest text-[#9A8D84] mb-2">Lineage</p>
+      <div class="pl-4 space-y-2">
+        <a href="/coreselfreiki/lineage/reiki-ryoho" class="block py-1 text-[#5A5A5A] hover:text-[#7C3F47]">Reiki Ryoho</a>
+        <a href="/coreselfreiki/lineage/gendai-reiki-ho" class="block py-1 text-[#5A5A5A] hover:text-[#7C3F47]">Gendai Reiki Ho</a>
+        <a href="/coreselfreiki/lineage/komyo-reikido" class="block py-1 text-[#5A5A5A] hover:text-[#7C3F47]">Komyo ReikiDo</a>
+      </div>
+    </div>
+
+    <div class="py-2">
+      <p class="text-xs uppercase tracking-widest text-[#9A8D84] mb-2">Services</p>
+      <div class="pl-4 space-y-2">
+        <a href="/coreselfreiki/services/group-classes" class="block py-1 text-[#5A5A5A] hover:text-[#7C3F47]">Group Classes</a>
+        <a href="/coreselfreiki/services/reiki-for-youngsters" class="block py-1 text-[#5A5A5A] hover:text-[#7C3F47]">Reiki for Youngsters</a>
+        <a href="/coreselfreiki/services/reiki-practice-circles" class="block py-1 text-[#5A5A5A] hover:text-[#7C3F47]">Reiki Practice Circles</a>
+        <a href="/coreselfreiki/services/private-sessions" class="block py-1 text-[#5A5A5A] hover:text-[#7C3F47]">Private Sessions</a>
+      </div>
+    </div>
+
+    <a href="/coreselfreiki/about" class="block py-2 text-[#4A4A4A] hover:text-[#7C3F47] font-medium border-t border-[#F5F1EB]">About</a>
+    <a href="/coreselfreiki/contact" class="block py-2 text-[#4A4A4A] hover:text-[#7C3F47] font-medium">Contact</a>
+  </div>
 </header>
+
+<script>
+  function setupMobileMenu() {
+    const button = document.getElementById('mobile-menu-button');
+    const menu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    if (button && menu && menuIcon && closeIcon) {
+      button.addEventListener('click', () => {
+        const isExpanded = menu.classList.contains('hidden');
+        
+        if (isExpanded) {
+          menu.classList.remove('hidden');
+          menuIcon.classList.add('hidden');
+          closeIcon.classList.remove('hidden');
+        } else {
+          menu.classList.add('hidden');
+          menuIcon.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+        }
+      });
+    }
+  }
+
+  // Setup on initial load
+  setupMobileMenu();
+
+  // Setup on View Transitions re-load (if used)
+  document.addEventListener('astro:after-swap', setupMobileMenu);
+</script>
