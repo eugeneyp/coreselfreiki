@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import floraWarmBg from '../../assets/images/flora-warm-bg.jpeg';
 ---
 
 <Layout title="Reiki Ryoho - Core Self Reiki">
@@ -18,14 +19,25 @@ import Layout from '../../layouts/Layout.astro';
     <section class="py-16 sm:py-20 lg:py-24 bg-white">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
         
-        {/* Quote */}
-        <div class="mb-16 text-center">
-          <blockquote class="font-serif text-2xl sm:text-3xl text-[#2C1810] mb-4 text-balance italic leading-relaxed">
-            "Of course we are lost, <br class="hidden sm:block" />
-            but good news, <br class="hidden sm:block" />
-            the question is not where to begin."
-          </blockquote>
-          <p class="text-lg text-[#5A5A5A] italic">(Japanese haiku)</p>
+        {/* Quote with Faded Background */}
+        <div class="mb-16 relative overflow-hidden rounded-2xl">
+          <div class="absolute inset-0 z-0">
+            <img 
+              src={floraWarmBg.src} 
+              alt="" 
+              class="w-full h-full object-cover object-center opacity-15"
+            />
+            <div class="absolute inset-0 bg-white/40"></div>
+          </div>
+          
+          <div class="relative z-10 py-12 px-6 sm:px-12 text-center">
+            <blockquote class="font-serif text-2xl sm:text-3xl text-[#2C1810] mb-4 text-balance italic leading-relaxed">
+              "Of course we are lost, <br class="hidden sm:block" />
+              but good news, <br class="hidden sm:block" />
+              the question is not where to begin."
+            </blockquote>
+            <p class="text-lg text-[#5A5A5A] italic">(Japanese haiku)</p>
+          </div>
         </div>
 
         {/* Core Text */}
