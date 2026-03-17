@@ -1,11 +1,7 @@
 {
   "mcpServers": {
-    "astro": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "@astrojs/mcp"
-      ]
+    "Astro docs": {
+      "httpUrl": "https://mcp.docs.astro.build/mcp"
     }
   }
 }
