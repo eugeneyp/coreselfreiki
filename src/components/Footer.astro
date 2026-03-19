@@ -3,7 +3,7 @@ import { Button } from './ui/Button.astro';
 import jizo from '../assets/images/jizo.jpg';
 ---
 
-<footer class="bg-[#EAB308] text-[#2C1810] py-12">
+<footer class="bg-[#FEF3AC] text-[#2C1810] py-12 border-t border-[#E5E0D8]">
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
       <div>
@@ -11,43 +11,43 @@ import jizo from '../assets/images/jizo.jpg';
           <img src={jizo.src} alt="Jizo Bodhisattva" class="w-10 h-10 object-contain" />
           <h3 class="font-serif text-xl">Core Self Reiki</h3>
         </div>
-        <p class="text-sm text-[#2C1810]/80 leading-relaxed">
+        <p class="text-sm text-[#5A5A5A] leading-relaxed">
           Discover, reclaim, deepen, and integrate your experience of your core self through Reiki Ryoho.
         </p>
       </div>
       <div>
-        <h4 class="font-semibold mb-4">Quick Links</h4>
+        <h4 class="font-semibold mb-4 text-[#2C1810]">Quick Links</h4>
         <ul class="space-y-2 text-sm">
           <li>
-            <a href="/coreselfreiki/" class="text-[#2C1810]/80 hover:text-[#2C1810] transition-colors">
+            <a href="/coreselfreiki/" class="text-[#5A5A5A] hover:text-[#7C3F47] transition-colors">
               Home
             </a>
           </li>
           <li>
-            <a href="/coreselfreiki/about" class="text-[#2C1810]/80 hover:text-[#2C1810] transition-colors">
+            <a href="/coreselfreiki/about" class="text-[#5A5A5A] hover:text-[#7C3F47] transition-colors">
               About
             </a>
           </li>
           <li>
-            <a href="/coreselfreiki/contact" class="text-[#2C1810]/80 hover:text-[#2C1810] transition-colors">
+            <a href="/coreselfreiki/contact" class="text-[#5A5A5A] hover:text-[#7C3F47] transition-colors">
               Contact
             </a>
           </li>
         </ul>
       </div>
       <div>
-        <h4 class="font-semibold mb-4">Connect</h4>
-        <p class="text-sm text-[#2C1810]/80 mb-4">
+        <h4 class="font-semibold mb-4 text-[#2C1810]">Services</h4>
+        <p class="text-sm text-[#5A5A5A] mb-4">
           For inquiries about sessions or courses, please contact Elyssa Matthews.
         </p>
-        <button class="bg-[#B91C1C] hover:bg-[#991B1B] text-white px-4 py-2 rounded text-sm transition-colors">
+        <a href="/coreselfreiki/contact" class="inline-block bg-[#B91C1C] hover:bg-[#991B1B] text-white px-6 py-2 rounded text-sm transition-colors shadow-sm">
           Get in Touch
-        </button>
+        </a>
       </div>
     </div>
-    <div class="mt-8 pt-8 border-t border-[#2C1810]/20 text-center text-sm text-[#2C1810]/60">
+    <div class="mt-8 pt-8 border-t border-[#2C1810]/10 text-center text-sm text-[#5A5A5A]">
       <p>&copy; {new Date().getFullYear()} Core Self Reiki. All rights reserved.</p>
-      <p class="mt-2 text-xs">Logo artwork by Yosei Kansaku</p>
+      <p class="mt-2 text-xs opacity-75">Logo artwork by Yosei Kansaku</p>
     </div>
   </div>
 </footer>
